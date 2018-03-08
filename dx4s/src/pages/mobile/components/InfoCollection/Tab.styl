@@ -1,0 +1,29 @@
+ul.info-collection-tab {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color #fff
+  height px2rem(100)
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex:1;
+    text-align: center;
+    font-size px2rem(32)
+    padding px2rem(22) 0
+    color $color-Z1
+    border-bottom 1px solid $color-L1
+    &.active {
+      color $color-A1
+      border-bottom 2px solid $color-A1
+    }
+    &:not(:last-child):after {
+      border-right 1px solid $color-L2
+      content ''
+      height 100%
+      float right
+    }
+  }
+}

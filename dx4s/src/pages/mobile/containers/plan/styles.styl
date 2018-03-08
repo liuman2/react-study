@@ -1,0 +1,245 @@
+.staffTask
+  height: 100%
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+  .loading-center
+    width: 64px
+    height: 64px
+    margin: auto
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+  .task-list
+    background-color: #fff
+    padding-left: px2rem(24)
+
+  .task-item
+    height: px2rem(200)
+    border-bottom: 1px solid $color-L1
+    padding-top: px2rem(24)
+    padding-bottom: px2rem(24)
+    position: relative
+
+  .task-item-img
+    display: inline-block
+    margin-right: px2rem(24)
+    width: px2rem(240)
+    height: px2rem(152)
+    line-height: 0
+    vertical-align: top
+
+  .task-item-info
+    display: inline-block
+    width: px2rem(390)
+    height: px2rem(152)
+
+  .task-item-name
+    display: -webkit-box
+    overflow: hidden
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    color: $color-Z1
+    font-size: px2rem(28)
+    // height: px2rem(78)
+    position: relative;
+    bottom: px2rem(4);
+    word-break: break-all
+    word-wrap: break-word
+
+  .task-item-finishRate
+    color: $color-Z2
+    font-size: px2rem(24)
+
+  .task-item-time
+    color: $color-Z3
+    font-size: px2rem(24)
+    position: relative
+    top: px2rem(10)
+
+  .icon-enter
+    position: absolute
+    right: px2rem(24)
+    top: 0
+    bottom: 0
+    margin: auto
+    width: px2rem(24)
+    height: px2rem(24)
+    background: url(./img/icon-enter.png) no-repeat
+    background-size: cover
+
+  .task-href
+    display: block
+
+  .play-img
+    height: px2rem(425)
+    width: 100%
+
+  .play-staff-task-icon
+    position: absolute
+    left: px2rem(24)
+    top: px2rem(198)
+    width: px2rem(176)
+    height: px2rem(34)
+    background: url(./img/rwxq-staff-task.png) no-repeat
+    background-size: cover
+
+  .play-name
+    position: absolute
+    left: px2rem(24)
+    bottom: px2rem(10)
+    color: #fff
+    font-size: px2rem(28)
+    font-weight: bold
+
+  .task-item-lock
+    color: $color-Z3
+    font-size: px2rem(24)
+    line-height: px2rem(24)
+    position: relative
+    // top: 10px
+    &:before
+      content: ''
+      display: inline-block
+      width: px2rem(24)
+      height: px2rem(24)
+      background: url(./img/rwxq-locking-icon.png) no-repeat
+      background-size: cover
+      margin-right: px2rem(8)
+      vertical-align: bottom
+
+  .task-item-complete
+    color: $color-B3
+    font-size: px2rem(24)
+    line-height: px2rem(24)
+    position: relative
+    top: 10px
+    &:before
+      content: ''
+      display: inline-block
+      width: px2rem(24)
+      height: px2rem(24)
+      background: url(./img/rwxq-complete-icon.png) no-repeat
+      background-size: cover
+      margin-right: px2rem(8)
+      vertical-align: bottom
+  .task-item-inread
+    color: $color-A1
+    font-size: px2rem(24)
+    line-height: px2rem(24)
+    position: relative
+    // top: 10px
+    &:before
+      content: ''
+      display: inline-block
+      width: px2rem(24)
+      height: px2rem(24)
+      background: url(./img/rwxq-inread-icon.png) no-repeat
+      background-size: cover
+      margin-right: px2rem(8)
+      vertical-align: bottom
+
+  .staffTask-detail
+    position: relative
+    .task-item-info
+      width: px2rem(435)
+    &-header
+      height px2rem(425)
+      position relative
+    &-tip
+      background-color #38acff
+      height px2rem(88)
+    &-exp
+      display flex
+      align-items center
+      justify-content center
+      text-align center
+      color #fff
+      strong
+        color #fffc00
+        font-size px2rem(24)
+      .left
+        flex 2
+        font-size px2rem(18)
+        text-align left
+        padding-left px2rem(24)
+      .middle
+        flex 1
+        img
+          width px2rem(64)
+          height px2rem(30)
+      .right
+        flex 2
+    .tip-height
+      line-height px2rem(88)
+    .info-validtime
+      padding-left px2rem(24)
+      &-title
+        font-size px2rem(24)
+        color #fff
+      &-time
+        font-size px2rem(24)
+        color #fffc00
+        font-weight bolder
+
+  .valid-status
+    display inline-block
+    font-size px2rem(24)
+    background-repeat no-repeat
+    background-position 0 center
+    position relative
+    line-height px2rem(24)
+    &.not-started
+      padding-left px2rem(30)
+      background-image url(./img/icon-plan-notStart.png)
+      color $color-A1
+      height px2rem(24)
+      background-size contain
+    &.invalid
+      padding-left px2rem(30)
+      background-image url(./img/icon-plan-invalid.png)
+      color $color-B4
+      height px2rem(24)
+      background-size contain
+    &.will-invalid
+      padding-left px2rem(30)
+      background-image url(./img/icon-plan-willInvalid.png)
+      color $color-B4
+      height px2rem(24)
+      background-size contain
+    &.not-study
+      position absolute
+      width px2rem(111)
+      height px2rem(88)
+      bottom px2rem(24)
+      right px2rem(24)
+      background url(./img/icon-not-study.png) no-repeat
+      background-size contain
+    &.pass
+      position absolute
+      width px2rem(111)
+      height px2rem(88)
+      bottom px2rem(24)
+      right px2rem(24)
+      background url(./img/icon-pass.png) no-repeat
+      background-size contain
+    &.not-pass
+      position absolute
+      width px2rem(111)
+      height px2rem(88)
+      bottom px2rem(24)
+      right px2rem(24)
+      background url(./img/icon-not-pass.png) no-repeat
+      background-size contain
+    &.not-mark
+      position absolute
+      right px2rem(30)
+      width px2rem(111)
+      height px2rem(88)
+      background url(./img/icon-not-mark.png) no-repeat
+      background-size contain

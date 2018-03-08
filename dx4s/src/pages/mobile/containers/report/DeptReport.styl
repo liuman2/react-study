@@ -1,0 +1,120 @@
+.report-department {
+  background-color: #fff;
+  min-height: 100%;  
+  position: relative;
+
+  .example-enter {
+    opacity: 0.01;
+    color: red;
+  }
+
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    color: green;
+  }
+
+  .example-leave {
+    opacity: 1;
+  }
+
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+
+  .example-appear {
+    opacity: 0.01;
+  }
+
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+
+  // 滑动层
+  .slider {
+    position: fixed  
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 9999
+    visibility: hidden
+    cursor: pointer;
+    &.active {
+      visibility: visible
+      .mask {
+        opacity: 1
+      }
+      ul {
+        right: 0
+      }
+    }
+    .mask {
+      background-color: rgba(0,0,0,.4)
+      height: 100%;
+      width: 100%;
+      opacity: 0
+      transition opacity .1s;
+      z-index: 100;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      overflow: auto;
+      position: absolute;
+      top: 0;
+      right: px2rem(-264);
+      height: 100%;
+      width 40%
+      background-color: #fff;
+      transition right .1s;
+      z-index: 101;
+      li {
+        border-bottom:1px solid $color-L1;
+        padding: 15px 10px;        
+        &.active {          
+          color: $color-A1;
+        }
+      }
+    }
+  }  
+  .dept {
+    background-color: $color-A0;
+    padding: 0 px2rem(100) 0 px2rem(30);
+    height: px2rem(96);
+    font-size: px2rem(26);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    span {
+      white-space: nowrap;
+      display: inline-block;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    span:first-child {
+      font-weight: bold;
+      margin-right: px2rem(30);      
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      flex-shrink: 1;
+    }
+    img {
+      height: px2rem(60);
+      position: absolute;
+      right: px2rem(30);
+      top: px2rem(18);
+    }
+  } 
+
+
+}
+
+
+

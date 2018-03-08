@@ -1,0 +1,77 @@
+.ui-pop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.ui-mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .4);
+}
+.ui-modal{
+  position: absolute;
+  top: rem(250);
+  left: 50%;
+  margin-left: rem(-270);
+  width: rem(540);
+  background: #fff;
+  border-radius: rem(14);
+  overflow: hidden;
+}
+.modal{
+  &--body{
+      padding: rem(30) rem(30) rem(25);
+      font-size: 0;
+      overflow: hidden;
+  }
+  &--foot{
+      border-top: 1px solid #ccc;
+  }
+  &--save{
+      &__desc{
+          margin-top: rem(10);
+          font-size: rem(34);
+          color: #333;
+          line-height: 1.2;
+          word-break: break-all;
+          // font-weight: bold;
+      }
+      &__ipt{
+          margin-top: rem(25);
+          width: 100%;
+          height: rem(60);
+          border: 1px solid #ccc;
+          padding: rem(10) rem(20);
+          line-height: rem(38);
+          font-size: rem(24);
+          vertical-align: top;
+          &:focus{
+              border-color: #0090ff;
+          }
+      }
+  }
+  &--confirm{
+      display: flex;
+      &__btn{
+          flex: 1;
+          text-align: center;
+          border-left: 1px solid #ccc;
+          font-size: rem(34);
+          color: #0090ff;
+          height: rem(87);
+          line-height: rem(86);
+          &:first-child{
+              border-left: 0;
+          }
+          &:active{
+              background: #eee;
+          }
+      }
+  }
+}

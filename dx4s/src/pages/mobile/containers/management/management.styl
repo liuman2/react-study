@@ -1,0 +1,437 @@
+.management
+  ul
+    padding 0
+    margin 0
+  li
+    list-style none
+  .mt-24
+    margin-top px2rem(24)!important
+  .ml-0
+    margin-left 0!important
+  .ml-24
+    margin-left px2rem(24)!important
+  .ml-16
+    margin-left px2rem(16)!important
+  .ml-66
+    margin-left px2rem(66)!important
+  .mr-10
+    margin-right px2rem(10)!important
+  .mb-4
+    margin-bottom px2rem(4)!important
+  .mb-16
+    margin-bottom px2rem(16)!important
+  .mb-30
+    margin-bottom px2rem(30)!important
+  .mb-42
+    margin-bottom px2rem(42)!important
+  .mt-30
+    margin-top px2rem(30)!important
+  .pt-24
+    padding-top px2rem(24)!important
+  .pt-36
+    padding-top px2rem(36)!important
+  .pb-36
+    padding-bottom px2rem(36)!important
+  .pl-24
+    padding-left px2rem(24)!important
+  .pb-100
+    padding-bottom px2rem(100)!important
+  .header
+    height px2rem(164)
+    list-style none
+    padding 0
+    margin 0
+    background-color #fff
+    display-flex(center)
+    li
+      box-flex(1)
+      text-align center
+      > a
+        display block
+        width 100%
+        color $color-Z2
+        font-size px2rem(20)
+        text-align center
+        height px2rem(98)
+        line-height 1
+        background-repeat no-repeat
+        background-position center px2rem(10)
+        background-size px2rem(50)
+        padding-top px2rem(72)
+        &.required
+          background-image url("img/icon-required.png")
+          display block
+        &.elective
+          background-image url("img/icon-elective.png")
+          display block
+        &.course
+          background-image url("img/icon-course.png")
+          display block
+        &.exam
+          background-image url("img/icon-exam.png")
+          display block
+  .section
+    margin-top px2rem(16)
+    background-color #fff
+    &-header
+      border-bottom 1px solid #f5f5f5
+      height px2rem(80)
+      line-height px2rem(80)
+      padding-left px2rem(24)
+      padding-right px2rem(30)
+      display-flex(flex-start)
+      .title
+        box-flex(1)
+        font-size px2rem(28)
+        color #333
+      .more
+        font-size px2rem(26)
+        color #a0a0a0
+        position relative
+        padding-right 10px
+        &:after
+          content ''
+          position absolute
+          right -12px
+          top px2rem(26)
+          display inline-block
+          width 20px
+          height px2rem(26)
+          background url('img/icon-more.png') no-repeat
+          background-size px2rem(15) px2rem(27)
+    &-body
+      // min-height px2rem(200)
+  .report
+    ul
+      list-style none
+      margin 0
+      padding 0
+      margin-bottom px2rem(50)
+      display-flex(center)
+    li
+      flex 1
+      text-align center
+      margin-top px2rem(32)
+      position relative
+      &:after
+        content ''
+        position absolute
+        top 0
+        bottom 0
+        right 0px
+        width 1px
+        background #f5f5f5
+      &:last-child
+        &:after
+          content ''
+          position absolute
+          top 0
+          bottom 0
+          right 0px
+          width 0px
+      .data
+        font-size px2rem(32)
+        color #333
+      .desc
+        font-size px2rem(25)
+        color #666
+    .total
+      text-align center
+      font-size px2rem(22)
+      color #a0a0a0
+      padding-bottom px2rem(20)
+  .empty
+    margin-top px2rem(30)
+    padding-bottom px2rem(58)
+    text-align center
+    &-title
+      margin-bottom px2rem(58)
+      font-size px2rem(26)
+      color #666666
+    a
+      font-size px2rem(32)
+      color #38acff
+  .required-item
+    padding px2rem(28) px2rem(30) px2rem(28) px2rem(24)
+    border-bottom 1px solid #f5f5f5
+    .item-title
+      font-size px2rem(26)
+      color #666666
+    .item-info
+      font-size px2rem(24)
+      display-flex(flex-start)
+      margin-top px2rem(14)
+      .info-time
+        box-flex(1)
+      .caption
+        color #a0a0a0
+      .time
+        color #f48644
+  .flex-box
+    display-flex(flex-start)
+  .flex-left
+    display-flex(flex-start)
+  .flex-right
+    box-flex(1)
+  .refresh-container
+    bottom px2rem(100)
+    top px2rem(96)
+  .refresh-container-bottom
+    bottom px2rem(100)
+  .exam
+    &-list
+      margin 0
+      padding 0
+      list-style none
+    &-item
+      padding-bottom px2rem(24)
+      border-bottom 1px solid #f5f5f5
+      background-color #fff
+      display-flex(flex-start)
+    &-img
+      width px2rem(240)
+      margin-right px2rem(24)
+      position relative
+      img
+        width 100%
+        height px2rem(156)
+      &-corner
+        height px2rem(40)
+        width 100%
+        position absolute
+        bottom 0
+        color #fff
+        text-align center
+        opacity .80
+        &.training
+          background-color #1e89ed
+        &.elective
+          background-color #e23a00
+        &.mall
+          background-color #7364e3
+        &.enterprise
+          background-color #1e89ed
+    &-info
+      box-flex(1)
+      margin-right px2rem(30)
+      &-title
+        height px2rem(78)
+        overflow hidden
+        text-overflow ellipsis
+        -webkit-line-clamp 2
+        -webkit-box-orient vertical
+        display -webkit-box
+        white-space normal !important
+        font-size px2rem(28)
+        color #333
+        word-break break-all
+      &-desc
+        font-size px2rem(24)
+        color #666
+        .pass-rate
+          color #f48644
+          margin-right px2rem(24)
+        .source
+          display inline-block
+          overflow hidden
+          text-overflow ellipsis
+          width px2rem(420)
+          white-space nowrap
+    &-time
+      height px2rem(80)
+      line-height px2rem(80)
+      background-color #fff
+      font-size px2rem(24)
+      color #666
+    &-detail
+      background-color #ffffff
+      &-item
+        height px2rem(96)
+        font-size px2rem(30)
+        border-bottom 1px solid #f5f5f5
+        display-flex(flex-start)
+        display table
+        width 96%
+      &-title
+        display table-cell
+        width px2rem(196)
+        vertical-align middle
+        color #666666
+      &-info
+        overflow hidden
+        display table-cell
+        vertical-align middle
+        box-flex(1)
+        color #333333
+        //text-overflow ellipsis
+        //white-space nowrap
+    &-total
+      margin-top px2rem(16)
+      padding 0 px2rem(24)
+      height px2rem(80)
+      line-height px2rem(80)
+      background-color #fff
+      border-bottom 1px solid #f5f5f5
+      display-flex(flex-start)
+      &-title
+        font-size px2rem(28)
+        box-flex(1)
+      &-info
+        font-size px2rem(24)
+    &-rank
+      margin 0
+      padding 0
+      background-color #ffffff
+      li
+        height px2rem(140)
+        border-bottom 1px solid #f5f5f5
+        position relative
+      .icon-rank
+        height px2rem(50)
+        width px2rem(42)
+        font-size px2rem(28)
+        // font-style oblique
+        color #666666
+        text-align center
+        position absolute
+        top 0
+        bottom 0
+        margin auto
+        &.no1
+          background  url("./img/icon-no1.png") no-repeat center
+          background-size contain
+        &.no2
+          background  url("./img/icon-no2.png") no-repeat center
+          background-size contain
+        &.no3
+          background  url("./img/icon-no3.png") no-repeat center
+          background-size contain
+      &-container
+        top px2rem(0)
+      &-info
+        margin-left px2rem(66)
+        padding-top px2rem(36)
+        padding-bottom px2rem(36)
+        font-size px2rem(26)
+      &-line
+        display-flex(flex-start)
+        p
+          display inline-block
+          margin 0
+        .left
+          box-flex(1)
+          color #666666
+        .right
+          margin-right px2rem(30)
+        .finish-tag
+          color #333333
+        .fail-tag
+          color #a0a0a0
+        .pass-tag
+          font-size px2rem(24)
+          &.pass
+            color #82c650
+            &:before
+              content ''
+              position relative
+              top px2rem(4)
+              display inline-block
+              width px2rem(24)
+              height px2rem(24)
+              margin-right px2rem(10)
+              background url("./img/icon-pass.png") no-repeat
+              background-size contain
+          &.fail
+            color #fa3c3c
+            &:before
+              content ''
+              position relative
+              top px2rem(4)
+              display inline-block
+              width px2rem(24)
+              height px2rem(24)
+              margin-right px2rem(10)
+              background url("./img/icon-fail.png") no-repeat
+              background-size contain
+      &-empty
+        background-color #fff
+        height px2rem(100)
+        line-height px2rem(100)
+        text-align center
+        font-size px2rem(28)
+        color #666666
+      .rank
+        margin-right px2rem(10)
+        font-size px2rem(28)
+        color #333333
+    &-more
+      position relative
+      padding-right px2rem(30)
+      &:after
+        content ''
+        position absolute
+        right 0
+        top 20px
+        display inline-block
+        width 20px
+        height 20px
+        background url('img/icon-more.png') no-repeat
+        background-size px2rem(15) px2rem(27)
+  .pass-rate
+    color #f48644
+  .dx-footer-button
+    background-color #38acff
+    width 100%
+    text-align center
+    color #ffffff
+    span.icon-plus:before
+      background url("./img/icon_plus.png") no-repeat center
+      background-size px2rem(32)
+  .guid-box
+    padding px2rem(30) px2rem(24)
+    margin-bottom px2rem(16)
+    font-size px2rem(28)
+    color #333
+    background-color #fff
+    p
+      margin 0
+      font-size px2rem(26)
+      color #333
+    img
+      width px2rem(702)
+    ul
+      font-size px2rem(26)
+      color #666
+      margin-top px2rem(20)
+      margin-bottom px2rem(30)
+  .guid-footer
+    padding px2rem(26) px2rem(24)
+    font-size px2rem(26)
+    color #333
+    background-color #fff
+    a
+      color #333
+    p
+      margin 0
+    .guid-icon
+      &:before
+        content ''
+        position relative
+        top px2rem(4)
+        display inline-block
+        width px2rem(24)
+        height px2rem(24)
+        margin-right px2rem(16)
+        background url("./img/icon-guid.png") no-repeat
+        background-size contain
+  .guid-report
+    width px2rem(280)
+    margin px2rem(160) px2rem(235) px2rem(24)
+  .guid-text
+    text-align center
+    font-size px2rem(28)
+    color #bec0c0
+    p
+      margin 0
+
+

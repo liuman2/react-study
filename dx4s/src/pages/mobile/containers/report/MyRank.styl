@@ -1,0 +1,140 @@
+rank-img(rate)
+  background-image url("./imgs/top" + rate + ".png")
+  background-size px2rem(56) px2rem(56)
+  background-repeat no-repeat
+  background-position center
+
+
+.report-list
+  position relative
+  height 100%
+  &-refresh-box
+    top px2rem(150)
+    bottom px2rem(120)
+  aside
+    color $color-Z4
+    padding px2rem(8)
+    text-align center
+
+  nav
+    display flex
+    background-color #fff
+    a
+      flex 1
+      display: block;
+      font-size px2rem(32)
+      text-align center
+      padding px2rem(22) 0
+      color $color-Z1
+      border-bottom 1px solid $color-L1
+      &.active
+        color $color-A1
+        border-bottom 2px solid $color-A1
+
+      &:first-child:after
+        border-right 1px solid $color-L2
+        content ''
+        height 100%
+        float right
+
+  ul
+    background-color #fff
+    list-style-type none
+    margin 0
+    padding 0
+    li
+      display flex
+      font-size px2rem(28)
+      height px2rem(120)
+      border-bottom 1px solid $color-L1
+      color $color-Z1
+      a {
+        display: flex;
+        width: 100%;
+        color: #333;
+      }
+      .order
+        font-size px2rem(42)
+        min-width 50px
+        display flex
+        justify-content center
+        align-items center
+        padding 10px
+        color $color-Z2
+
+      .order.first
+        rank-img(1)
+      .order.second
+        rank-img(2)
+      .order.third
+        rank-img(3)
+
+      .head
+        align-items center
+        justify-content center
+        display flex
+        flex-basis px2rem(80)
+        margin-right 10px
+        img
+          height px2rem(80)
+          width px2rem(80)
+          border-radius: 100%;
+
+      .userinfo
+        flex 1
+        display flex
+        flex-direction column
+        justify-content center
+        align-items flex-start
+        .name
+          text-overflow ellipsis
+          white-space normal
+          overflow hidden
+          display -webkit-box
+          -webkit-line-clamp 1
+          -webkit-box-orient vertical
+
+        .department
+          font-size px2rem(24)
+          color $color-Z2
+          text-overflow ellipsis
+          white-space normal
+          overflow hidden
+          display -webkit-box
+          -webkit-line-clamp 1
+          -webkit-box-orient vertical
+
+      .complete
+        align-items center
+        justify-content flex-end
+        display flex
+        flex-basis 150px
+        padding-right 10px
+        white-space nowrap
+        .percentage
+          font-size px2rem(36)
+          margin-left 5px
+          font-weight bold
+  .fixed-bottom
+    position fixed
+    bottom 0
+    left 0
+    right 0
+    z-index 2
+    
+    
+  .mark {
+    background-color: $color-A1;
+    .order, .head, .userinfo, .complete {
+      color: #fff;
+      .department {
+        color: #fff;
+      }
+    }
+  }
+  .bottom0 {
+    bottom: 0;
+  }
+
+
+

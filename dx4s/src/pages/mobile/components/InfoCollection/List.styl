@@ -1,0 +1,38 @@
+ul.info-collection-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    a {
+      color: $color-Z1;
+      font-size: px2rem(28);
+      padding: 15px 10px;
+      position: relative;
+      border-bottom: 1px solid $color-L1;
+      display: block;
+      padding-right: 35px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      &::after{
+        content: '';
+        width: px2rem(28);
+        height: px2rem(28);
+        background-image: url("../../../../img/icon_arrow_right.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: px2rem(20);
+        top: 50%;
+        margin-top: px2rem(-14);
+      }
+      .createTime {
+        color: $color-Z3;
+      }
+    }    
+  }
+}

@@ -1,0 +1,79 @@
+.preview
+  height 100%
+  .preview-box
+    height 92%
+    position relative
+    overflow scroll
+  .process-panel-web
+    top 0 !important
+  .h5-wrapper
+    position: relative
+    -webkit-overflow-scrolling: touch
+    height 100%
+    overflow-y: scroll
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      border none
+      height 100%
+      width: 1px
+      min-width: 100%
+  .chapter-number
+    width 100%
+    height 8%
+    bottom 0
+    background white
+    position fixed
+    .fixed-bottom
+      width 100%
+      height 100%
+      padding 0 px2rem(24)
+      line-height 100%
+      border-top 1px solid $color-L2
+      text-align center
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      .preview-footer-page
+        display block
+        -webkit-flex: 1;
+        flex: 1;
+      a
+        user-select none
+        display inline-block
+        width px2rem(160)
+        height px2rem(64)
+        text-align center
+        line-height px2rem(64)
+        border 1px solid $color-Z3
+        border-radius px2rem(3)
+        color $color-Z1
+        &.first-node, &.last-node
+          border-color $color-Z4
+          color $color-Z4
+        &.disabled
+          opacity .48
+  .pass-time-tip
+    background-color rgba(21,21,27,.7)
+    opacity .6
+    color #ffffff
+    text-align center
+    position absolute
+    width 100%
+    top 0
+    z-index 1
+    height  px2rem(64)
+    line-height px2rem(64)
+    .close
+      background-image url("../../../../img/icon_close_active.png")
+      height px2rem(20)
+      width px2rem(20)
+      display inline-block
+      background-size contain
+      float right
+      margin-top px2rem(20)
+      margin-right px2rem(10)

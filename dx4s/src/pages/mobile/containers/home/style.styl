@@ -1,0 +1,285 @@
+.home
+  .dd-entrance
+    // display flex
+    height px2rem(192)
+    padding px2rem(32) 0
+    background-color #fff
+    margin: 0 px2rem(-20)
+    .wrapper
+      float left
+      width 25%
+      // flex-grow 1
+    a
+      display block
+      margin 0 auto      
+      position relative
+      img
+        display block
+        margin 0 auto px2rem(16)
+        width px2rem(88)
+        height px2rem(88)
+        background-color $color-placehold
+        border-radius px2rem(44)
+        text-indent 100vw
+      span
+        display block
+        color $color-Z1
+        text-align center
+        font-size px2rem(24)
+    .red-dot
+      &:before
+        content ' '
+        background #f00
+        border-radius 50%
+        width px2rem(16)
+        height px2rem(16)
+        top px2rem(8)
+        right px2rem(46)
+        position absolute
+  .carousel
+    height: px2rem(262)
+    overflow: hidden
+
+    img
+      height: px2rem(262)
+  .main
+    padding: 0 px2rem(20)
+
+  .title
+    height: px2rem(80)
+    padding: px2rem(20) 0
+    clear: both
+
+    div
+      display: inline-block
+
+    .title-content
+      color: $color-A1
+      font-size: px2rem(28)
+
+    .title-more
+      font-size: px2rem(25.8)
+      a
+        color: #666666
+        padding-left: px2rem(40)
+        img
+          height: px2rem(36)
+          width: px2rem(36)
+  .height258
+    height: px2rem(258)!important
+  .card
+    width: px2rem(346)
+    height: px2rem(310)
+    padding: px2rem(8)
+    background-color: white
+    box-shadow: 0 0 px2rem(10) #e2e2e2
+    margin-bottom: px2rem(20)
+    font-size px2rem(24)
+    float: left
+    position: relative
+    .card-face
+      width: px2rem(329)
+      height: px2rem(160)
+      margin: 0 auto px2rem(16)
+      position: relative
+
+      a
+        display: inline-block
+        height: 100%
+
+      .card-face-tag
+        position: absolute
+        bottom: 0
+        right: 0
+        min-width: px2rem(80)
+        line-height: px2rem(28)
+        font-size: px2rem(22)
+        color: white
+        padding: 0 px2rem(10)
+        text-align: center
+
+      .card-face-tag.new
+        background-color: #f48644
+
+      .card-face-tag.series
+        background-color: #ffb800
+
+      .card-face-tag.mini
+        background-color: #83c751
+
+      img
+        width: 100%
+        height: 100%
+
+    .card-content
+      // line-height: px2rem(30)
+      // height: px2rem(56)
+      overflow: hidden
+      white-space normal !important
+      display -webkit-box
+      -webkit-line-clamp 2
+      -webkit-box-orient vertical
+      text-overflow ellipsis
+      .red
+        color red
+      .blue
+        color #38ACFF
+      .orange
+        color: orange
+      .a1
+        color $color-A1
+      .b3
+        color $color-B3
+      .z2
+        color $color-Z2
+      .valid-status
+        display block
+        position relative!important
+        margin-top px2rem(12)
+
+    .status-info
+      position absolute
+      left 0
+      bottom 0
+      width 100%
+      padding-left px2rem(5)
+      font-size px2rem(22)
+      height px2rem(32)
+      line-height px2rem(32)
+      background-color #000
+      opacity 0.6
+      overflow hidden
+      color #fff
+    .card-title
+      overflow hidden
+      text-overflow ellipsis
+      -webkit-line-clamp 2
+      -webkit-box-orient vertical
+      display -webkit-box
+      white-space normal !important
+      word-break break-all
+  .card.left
+    margin-right: px2rem(17)
+
+  .blank
+    line-height px2rem(80)
+  .bottomBlank
+    height 1.3rem
+  .nomsg
+    text-align center
+    img
+      width px2rem(280)
+      height px2rem(280)
+      margin-top: px2rem(-100)
+    button
+      margin-top px2rem(20)
+      font-size:px2rem(30)
+  .fadein
+    opacity 100
+
+  .valid-status
+    display inline-block
+    font-size px2rem(24)
+    background-repeat no-repeat
+    background-position 0 center
+    position absolute
+    bottom 0
+    padding-bottom 2px
+    &.not-started
+      padding-left px2rem(40)
+      background-image url(./img/icon-plan-notStart.png)
+      color $color-A1
+      background-size contain
+    &.invalid
+      padding-left px2rem(40)
+      background-image url(./img/icon-plan-invalid.png)
+      color $color-B4
+      background-size contain
+    &.will-invalid
+      padding-left px2rem(40)
+      background-image url(./img/icon-plan-willInvalid.png)
+      color $color-B4
+      background-size contain
+    &.not-mark
+      color #82c650
+    .not-study
+      padding 0 3px
+      margin-right px2rem(8)
+      border 1px solid $color-Z4
+      background-color $color-Z4
+      color #fff
+      width px2rem(40)
+      height px2rem(20)
+    .has-study
+      padding 0 3px
+      margin-right px2rem(8)
+      border 1px solid #009aec
+      background-color #009aec
+      width px2rem(40)
+      height px2rem(20)
+      color #fff
+    .not-pass
+      padding 0 3px
+      margin-right px2rem(8)
+      border 1px solid $color-Z4
+      color $color-Z4
+      width px2rem(40)
+      height px2rem(20)
+    .has-pass
+      padding 0 3px
+      margin-right px2rem(8)
+      border 1px solid #009aec
+      width px2rem(40)
+      height px2rem(20)
+      color #009aec
+
+  .notify-bar
+    display-flex(flex-start)
+    height px2rem(80)
+    margin 0 px2rem(-20)
+    margin-top px2rem(16)
+    line-height px2rem(80)
+    background #ffffff
+    .icon
+      background url("./img/icon_notice.png") center 0 no-repeat
+      background-size contain
+      width px2rem(30)
+      height px2rem(30)
+      margin px2rem(25) px2rem(16)
+    .content
+      box-flex(1)
+      color #000000
+      text-overflow ellipsis
+      overflow hidden
+      white-space nowrap
+      position relative
+      margin-right: px2rem(24)
+      &:after
+        content ''
+        position absolute
+        right -12px
+        top px2rem(25)
+        display inline-block;
+        width 20px
+        height px2rem(24)
+        background url("./img/icon_todo.png") no-repeat
+        background-size px2rem(15) px2rem(27)
+
+.sign-in
+  position fixed
+  z-index 999
+  bottom px2rem(130)
+  right px2rem(20)
+  background url("./assets/icon_signin.png") no-repeat center
+  background-size px2rem(134) px2rem(119)
+  width px2rem(134)
+  height px2rem(119)
+  text-align center
+  > a
+    display block
+    width 100%
+    height 100%
+    padding-top px2rem(78)
+    font-size px2rem(16)
+    color $color-Z2
+

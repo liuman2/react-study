@@ -1,0 +1,115 @@
+.dept-report-learning-data {
+  height: px2rem(332); 
+  &-refresh-box {
+    top px2rem(520)
+    bottom 0
+  }
+  header {
+    background-image: url("./imgs/learning-data-bg.png");
+    height: 100%; 
+    width: 100%;
+    background-size: 100% 100%;
+    display: flex;
+    padding: px2rem(40) 0 px2rem(40) px2rem(60);
+    align-items: center;    
+    &.nodata{
+      background-image: url("./imgs/learning-data-nodata.png");
+      .left, .right {
+        display: none;
+      }
+    }
+    .left {
+      width: px2rem(260); 
+      position: relative;
+      .rate {
+        position: absolute;
+        display: flex;       
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        top: 50%;
+        margin-top: px2rem(-55); 
+        div {
+          &:nth-child(1){
+            color: #ffffff;
+            font-size: px2rem(24); 
+          }
+          &:nth-child(2){
+            color: #fffd3b;
+            font-size: px2rem(64); 
+          }
+        }
+      }   
+    }
+    .right {
+      flex: 1;
+      color: #fff;
+      font-size: px2rem(24); 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .num {
+        font-size: px2rem(64); 
+      }
+    }
+  }
+  ul {
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: flex;
+      font-size px2rem(28)
+      height px2rem(120)
+      line-height: px2rem(120)
+      border-bottom 1px solid $color-L1
+      color $color-Z1
+      .order {
+        font-size: 0.56rem;
+        min-width: px2rem(100);       
+        display: inline-flex;       
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        color: #666;
+        font-style: italic;
+      }
+      .mid {
+        flex: 1;
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        white-space: nowrap;
+        span:first-child  {
+          display: inline;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        span:last-child {
+          margin-left: 10px;
+          font-weight: bold;
+          font-size px2rem(32);
+          white-space: nowrap;
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+      }
+      .receive {
+        align-items: center;
+        justify-content: flex-end;
+        display: inline-flex;
+        padding: 0 10px;
+      }
+    }
+  }
+  .learning-data-loader {
+    display: flex;
+    justify-content: center;
+  }
+}

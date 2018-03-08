@@ -1,0 +1,67 @@
+.info-collection-form {
+  min-height: 100%;
+  padding-bottom: px2rem(80);
+  .infos {
+    padding: px2rem(30);
+    background-color: #fff;
+  }
+  .group {
+    padding-bottom: px2rem(30);
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  label {
+    display: block;
+    color: $color-Z2;
+  }
+  textarea {
+    display: block;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $color-L1;
+    border-top: 1px solid transparent;
+    width: 100%;
+    text-align: justify;
+    resize: none;
+    border-radius: 0;
+    &[disabled]{
+      color: $color-Z1;
+    }
+  }
+  select {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $color-L1;
+    border-radius: 0;
+    padding: 6px 4px 8px;
+    &[disabled]{
+      color: $color-Z1;
+    }
+    option {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .loading {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    text-align: center;
+  }
+  .buttons{
+    padding: px2rem(30);
+  }
+  .times {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: $color-A0;
+    margin: 0;
+    padding: px2rem(30);
+  }
+}

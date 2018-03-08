@@ -1,0 +1,144 @@
+.DDGuide-container
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999
+
+  .slick-slider
+    height: 100%
+
+.DDGuide-close
+  position: absolute
+  top: px2rem(100)
+  right: px2rem(90)
+  width: px2rem(45)
+  height: px2rem(95)
+  background-image: url('./img/icx_icon_of_close.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer
+
+.DDGuide-content
+  position: absolute
+  top: px2rem(195)
+  left: 0
+  right: 0
+  width: px2rem(640)
+  height: px2rem(840)
+  margin: auto
+  background-color: #fff
+  border-radius: px2rem(10)
+
+.DDGuide-slider-dots
+  li
+    height: px2rem(100)
+    width: px2rem(15)
+    button
+      width: px2rem(15)
+      height: px2rem(15)
+      &:before
+        width: px2rem(15)
+        height: px2rem(15)
+        font-size: px2rem(50)
+    &.slick-active button:before
+      color: $color-A1
+
+.DDGuide-slider-item
+  position: relative
+
+.DDGuide-slider-item-img
+  width: px2rem(640)
+  height: px2rem(600)
+  border-bottom: 1px solid $color-L1
+  background-size: contain
+  background-repeat: no-repeat
+
+.DDGuide-slider-item-img-one
+  background-image: url('./img/icx_icon_of_technological_process.png')
+
+.DDGuide-slider-item-img-two
+  background-image: url('./img/icx_icon_of_elective_course.png')
+
+.DDGuide-slider-item-btn
+  margin-top: px2rem(40)
+  margin-left: auto
+  margin-right: auto
+  width: px2rem(350)
+  height: px2rem(80)
+  line-height: px2rem(80)
+  text-align: center
+  font-size: px2rem(32)
+  color: #fff
+  border-radius: px2rem(10)
+  background-color: $color-A1
+  display: block
+
+.DDGuide-footer
+  position: absolute
+  bottom: px2rem(20)
+  right: px2rem(25)
+  line-height: 0
+
+.DDGuide-icon-not-remind, .DDGuide-icon-remind
+  display: inline-block
+  width: px2rem(40)
+  height: px2rem(40)
+  background-size: contain
+  background-repeat: no-repeat
+  vertical-align: middle
+
+.DDGuide-icon-not-remind
+  background-image: url('./img/icx_icon_of_not_checked.png')
+
+.DDGuide-icon-remind
+  background-image: url('./img/icx_icon_of_check.png')
+
+.DDGuide-text-not-remind, .DDGuide-text-remind
+  display: inline-block
+  margin-left: px2rem(20)
+  font-size: px2rem(30)
+  vertical-align: middle
+
+.DDGuide-text-not-remind
+  color: #999
+
+.DDGuide-text-remind
+  color: #666
+
+
+.DDGuide-step-section
+  margin-top: px2rem(25)
+  margin-bottom: px2rem(25)
+  margin-right: px2rem(10)
+  margin-left: px2rem(10)
+
+  h1
+    font-size: px2rem(32)
+    line-height: px2rem(55)
+    margin: px2rem(10) 0
+
+  h2, p
+    font-size: px2rem(28)
+    color: #666
+
+  p
+    margin: 0
+
+  h2
+    margin: px2rem(16) 0
+
+  img
+    line-height: 0;
+    display: block;
+    width: 100%
+    vertical-align: middle
+    margin: px2rem(16) 0
+
+
+
+
+
+

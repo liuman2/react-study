@@ -1,0 +1,127 @@
+.dx-card
+  width 224px
+  margin-right 20px
+  margin-bottom 20px
+  .dx-card-content
+    display block
+    color $color-Z1
+    text-decoration none
+    width 224px
+    &:hover
+      .dx-card-img
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+      .dx-card-name
+        color $color-A1
+    .dx-card-img
+      position relative
+      width 100%
+      height 126px
+      margin-bottom 8px
+      img
+        width 100%
+        height 100%
+    .dx-card-name
+      white-space nowrap
+      width 220px
+      overflow hidden
+      text-overflow ellipsis
+    .dx-card-done
+      position absolute
+      bottom 0
+      right 0
+      background-color rgba(0, 0, 0, .5)
+      color #FFF
+      padding 0 5px
+    .dx-card-isFaid
+      position absolute
+      bottom 0
+      right 0
+      background-color rgba(220, 76, 85, 1)
+      color #FFF
+      padding 0 5px
+    .dx-card-delete
+      position absolute
+      top 0
+      right 0
+      z-index 2
+    .dx-card-live
+      clearfix()
+      .dx-card-live-time
+        float left
+        color $color-Z2
+      .dx-card-live-status
+        float right
+        background-repeat no-repeat
+        background-position 0 center
+        padding-left 18px
+        &.on_live
+          background-image url("./img/icon-onLive.png")
+          color $color-A1
+        &.about_to_start
+          background-image url("./img/icon-notStart.png")
+          color $color-B3
+        &.over
+          background-image url("./img/icon-over.png")
+          color $color-Z2
+        &.on_live_n
+          border 1px solid $color-Z1
+          text-align center
+          padding 0 5px
+          font-size 14px
+  .valid-status
+    margin-top 10px
+    font-size 14px
+    background-repeat no-repeat
+    background-position 0 center
+    min-height 20px
+    &.not-started
+      padding-left 20px
+      background-image url("./img/icon-plan-notStart.png")
+      color $color-A1
+    &.invalid
+      padding-left 20px
+      background-image url("./img/icon-plan-invalid.png")
+      color $color-B4
+    &.will-invalid
+      padding-left 20px
+      background-image url("./img/icon-plan-willInvalid.png")
+      color $color-B4
+    .not-study
+      padding 0 3px
+      margin-right 10px
+      border 1px solid $color-Z4
+      background-color $color-Z4
+      color #fff
+      width 40px
+      height 20px
+    .has-study
+      padding 0 3px
+      margin-right 10px
+      border 1px solid #009aec
+      background-color #009aec
+      width 40px
+      height 20px
+      color #fff
+    .not-pass
+      padding 0 3px
+      margin-right 10px
+      border 1px solid $color-Z4
+      color $color-Z4
+      width 40px
+      height 20px
+    .has-pass
+      padding 0 3px
+      margin-right 10px
+      border 1px solid #009aec
+      width 40px
+      height 20px
+      color #009aec
+    .not-mark
+      padding 0 3px
+      margin-right 10px
+      border 1px solid #ff8208
+      width 40px
+      height 20px
+      color #ff8208

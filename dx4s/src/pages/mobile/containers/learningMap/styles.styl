@@ -1,0 +1,934 @@
+// 学习地图主界面
+.index-map
+  // background-size: contain
+  // background-repeat: no-repeat
+  // background-image: url('./img/background.jpg')
+  // position: absolute
+  width: px2rem(750)
+  height: px2rem(1205)
+  position: relative;
+  // width: 100%;
+  // height: 100%;
+  overflow: hidden;
+  // background-size: 100% 100%;
+
+  ul
+    padding: 0
+    margin: 0
+  li
+    list-style-type: none
+
+.index-map-user
+  position: absolute
+  left: px2rem(133)
+  width: px2rem(479)
+  height: px2rem(151)
+  background-size: cover
+  background-repeat: no-repeat
+  background-image: url('./img/pictureFrame.png')
+  z-index: 998;
+
+.index-map-user-picture
+  position: absolute
+  top: px2rem(62)
+  left: px2rem(100)
+  width: px2rem(68)
+  height: px2rem(68)
+  border-radius: px2rem(8)
+  border: 2px solid #ffe0b4
+
+.index-map-user-name
+  position: absolute
+  top: px2rem(60)
+  left: px2rem(192)
+  font-size: px2rem(22)
+  color: #813b08
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+  width: px2rem(204)
+
+.index-map-user-score
+  position: absolute
+  top: px2rem(92)
+  left: px2rem(190)
+  line-height: px2rem(46)
+  color: #823c08
+  &::before
+    content: ''
+    display: inline-block
+    background: url("./img/cup.png") center center no-repeat
+    background-size: contain
+    width: px2rem(32)
+    height: px2rem(34)
+    vertical-align: sub
+    margin-right: px2rem(18)
+
+.index-map-items
+  // background-size: contain
+  background-repeat: no-repeat
+  // background-image: url('./img/clouds.png')
+  background-image: url('./img/bg.jpg')
+  // background-position-y: px2rem(286)
+  // width: px2rem(750)
+  // height: px2rem(1205)
+  background-size: 100% 100%;
+  width: 100%
+  height: 100%
+  position: relative;
+
+.index-map-item
+  position: absolute
+  width: px2rem(250)
+  height: px2rem(241)
+  text-align: center
+
+.index-map-item-img
+  display: block
+  width: px2rem(250)
+  height: px2rem(140)
+  margin-bottom: px2rem(12)
+
+.index-map-item-name
+  display: block
+  width: px2rem(222)
+  height: px2rem(38)
+  line-height: px2rem(40)
+  font-size: px2rem(22)
+  color: #fff
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/nameMask.png')
+  margin: auto
+  text-shadow: -1px -1px 0 #06a2cc, 1px -1px 0 #06a2cc, -1px 1px 0 #06a2cc, 1px 1px 0 #06a2cc
+  width: px2rem(230)
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+
+.one-one
+  top: 0
+  left: 0
+.one-two
+  top: 0
+  left: px2rem(250)
+.one-three
+  top: 0
+  left: px2rem(500)
+.two-one
+  top: px2rem(180)
+  left: 0
+.two-two
+  top: px2rem(180)
+  left: px2rem(250)
+.two-three
+  top: px2rem(180)
+  left: px2rem(500)
+.three-one
+  top: px2rem(436.25)
+  left: 0
+.three-two
+  top: px2rem(436.25)
+  left: px2rem(250)
+.three-three
+  top: px2rem(436.25)
+  left: px2rem(500)
+.four-one
+  top: px2rem(692.5)
+  left: 0
+.four-two
+  top: px2rem(692.5)
+  left: px2rem(250)
+.four-three
+  top: px2rem(692.5)
+  left: px2rem(500)
+.five-one
+  top: px2rem(948.75)
+  left: 0
+.five-two
+  top: px2rem(948.75)
+  left: px2rem(250)
+.five-three
+  top: px2rem(948.75)
+  left: px2rem(500)
+
+// 学习地图个人信息
+.index-map-user-detail-mask
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0, 0, 0, 0.45)
+
+  ::-webkit-scrollbar
+    right: 0
+  ::-webkit-scrollbar-thumb
+    background-size: contain
+    background-position-x: px2rem(2)
+    background-repeat: no-repeat
+    background-image: url('./img/scrollBar.png')
+  ::-webkit-scrollbar-track-piece
+    background-repeat: no-repeat
+    background-position-x: px2rem(8)
+    background-image: url('./img/scrollBarBackground.png')
+
+.index-map-user-detail-content
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  width: px2rem(633)
+  height: px2rem(604)
+  margin: auto
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/personBackground.png')
+
+.index-map-user-detail-base
+  height: px2rem(180)
+  margin-top: px2rem(34)
+  margin-left: px2rem(38)
+  margin-bottom: px2rem(60)
+
+
+.index-map-user-detail-avatar
+  display: inline-block
+  margin-right: px2rem(44)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/avatarBackground.png')
+  padding: px2rem(8)
+  width: px2rem(180)
+  height: px2rem(180)
+  vertical-align: top
+  img
+    width: 100%
+    height: 100%
+    border-radius: px2rem(15)
+
+.index-map-user-detail-info
+  display: inline-block
+  padding-top: px2rem(12)
+
+.index-map-user-detail-name, .index-map-user-detail-department, .index-map-user-detail-positionCreateTime
+  color: #a67d49
+  line-height: px2rem(30)
+  font-size: px2rem(30)
+  height: px2rem(30)
+  margin-bottom: px2rem(33)
+  width: px2rem(330)
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.index-map-user-detail-study-precess
+  height: px2rem(189)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/textBackground.png')
+  margin-left: px2rem(30)
+  margin-bottom: px2rem(33)
+
+.index-map-user-detail-study-precess-label
+  display: inline-block
+  width: px2rem(183)
+  height: px2rem(41)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/feather.png')
+  text-align: center
+  color: #9f5611
+  font-size: px2rem(26)
+  font-weight: bold
+  margin-right: px2rem(35)
+  vertical-align: top
+  margin-top: px2rem(20)
+  margin-left: px2rem(10)
+  line-height: px2rem(41)
+  padding-left: px2rem(16)
+
+.index-map-user-detail-study-precess-items
+  display: inline-block
+  height: px2rem(186)
+  overflow-y: scroll
+  width: px2rem(360)
+
+.index-map-user-detail-study-precess-item
+  font-size: px2rem(26)
+  padding-top: px2rem(20)
+  padding-right: px2rem(30)
+  color: #ac8d70
+  font-weight: bold
+  word-wrap: break-word
+
+.index-map-user-detail-study-footer
+  text-align: center
+
+.index-map-user-detail-study-footer-ok
+  width: px2rem(199)
+  height: px2rem(73)
+
+// 学习地图列表页
+.route-detail
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/routeDetailBG.png')
+  position: absolute
+  width: px2rem(750)
+  height: px2rem(1205)
+
+  li
+    list-style-type: none
+
+.route-detail-header
+  margin-top: px2rem(35)
+  margin-bottom: px2rem(18)
+
+.route-detail-name
+  width: px2rem(554)
+  height: px2rem(128)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/routeTitleBG.png')
+  margin-left: px2rem(95)
+  text-align: center
+
+  span
+    display: inline-block
+    color: #fff
+    font-size: px2rem(36)
+    text-shadow: 0 0 px2rem(20) #bc3b23
+    margin-top: px2rem(15)
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+    width: px2rem(320)
+
+.route-detail-info-icon
+  width: px2rem(84)
+  height: px2rem(88)
+  display: block
+  position: absolute
+  top: px2rem(29)
+  right: px2rem(33)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/routeInfo-icon.png')
+
+.route-detail-phase-items
+  height: px2rem(976)
+  width: px2rem(658)
+  overflow-y: scroll
+  margin: 0 auto
+  padding-top: px2rem(13)
+  padding-left: px2rem(11)
+  padding-right: px2rem(11)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/phaseBG.png')
+
+.route-detail-phase-item
+  position: relative
+  width: px2rem(634)
+  height: px2rem(136)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/phaseItemBG.png')
+  margin-bottom: px2rem(10)
+
+.route-detail-phase-order
+  display: inline-block
+  margin-top: px2rem(16)
+  margin-right: px2rem(21)
+  margin-bottom: px2rem(22)
+  margin-left: px2rem(18)
+  width: px2rem(122)
+  height: px2rem(100)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/badge.png')
+  background-position-x: px2rem(20)
+  text-align: center
+  vertical-align: top
+  line-height: px2rem(84)
+
+  span
+    font-size: px2rem(44)
+    color: #fff
+    font-weight: bold
+    text-shadow: 0px 0px px2rem(12) #066a74
+
+.route-detail-new-icon
+  display: block
+  position: absolute
+  left: px2rem(20)
+  bottom: px2rem(22)
+  width: px2rem(122)
+  height: px2rem(42)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/new-icon.png')
+  &.en
+    background-image: url('./img/newEn-icon.png')
+
+.route-detail-pass-icon
+  display: block
+  position: absolute
+  left: px2rem(20)
+  bottom: px2rem(22)
+  width: px2rem(122)
+  height: px2rem(42)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/pass-icon.png')
+  &.en
+    background-image: url('./img/passEn-icon.png')
+
+.route-detail-phase-name
+  display: inline-block
+  width: px2rem(340)
+  margin-top: px2rem(48)
+  margin-bottom: px2rem(53)
+  font-size: px2rem(30)
+  height: px2rem(30)
+  line-height: px2rem(30)
+  font-weight: bold
+  color: #9f7c56
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+
+.route-detail-phase-coures
+  display: inline-block
+  text-align: center
+  width: px2rem(116)
+  vertical-align: bottom
+
+.route-detail-cup-icon
+  position: absolute
+  right: px2rem(49)
+  top: px2rem(20)
+  width: px2rem(54)
+  height: px2rem(58)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/cup-icon.png')
+
+.route-detail-phase-coures-status
+  position: relative
+  bottom: px2rem(15)
+  display: inline-block
+  color: #9f7c54
+  font-size: px2rem(30)
+
+.color-f4593f
+  color: #f4593f
+
+.route-info-mask
+  display: none/
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0, 0, 0, 0.45)
+  z-index: 99
+
+.route-info
+  position: absolute
+  top: px2rem(320)
+  left: 0
+  right: 0
+  width: px2rem(634)
+  height: px2rem(434)
+  margin: auto
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/routeInfoBG.png')
+  padding-left: px2rem(30)
+  padding-right: px2rem(30)
+  padding-bottom: px2rem(60)
+  text-align: center
+
+.route-info-title
+  width: px2rem(438)
+  height: px2rem(114)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/routeInfoTitleBG.png')
+  margin: auto
+  margin-top: px2rem(-52)
+  text-align: center
+
+  span
+    display: inline-block
+    color: #fff
+    font-size: px2rem(36)
+    text-shadow: 0 0 px2rem(20) #bc3b23
+    margin-top: px2rem(10)
+
+.route-info-description
+  overflow-y: auto
+  font-size: px2rem(30)
+  color: #a17b54
+  line-height: px2rem(56)
+  margin-top: px2rem(30)
+  height: px2rem(160)
+  margin-bottom: px2rem(60)
+  text-indent: px2rem(58)
+  text-align: left
+  word-wrap: break-word
+
+.study-route-info-description
+  display: -webkit-box
+  -webkit-line-clamp: 2
+  -webkit-box-orient: vertical
+  overflow: hidden
+  font-size: px2rem(30)
+  color: #a17b54
+  line-height: px2rem(56)
+  margin-top: px2rem(120)
+  height: px2rem(128)
+  margin-bottom: px2rem(40)
+  text-align: center
+  margin-right: px2rem(40)
+  margin-left: px2rem(40)
+  word-wrap: break-word
+
+.route-info-footer-ok
+  width: px2rem(199)
+  height: px2rem(73)
+
+.route-detail-phase-item-mask
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0, 0, 0, 0.25)
+  border-radius: px2rem(8)
+  z-index: 9
+
+.route-detail-phase-lock-icon
+  width: px2rem(42)
+  height: px2rem(52)
+  display: block
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/lock-icon.png')
+
+// study-map
+.study-map
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/studyBG.jpg')
+  position: absolute
+  width: px2rem(750)
+  height: px2rem(1206)
+
+  li
+    list-style-type: none
+
+.study-map-header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  margin: auto
+  width: px2rem(474)
+  height: px2rem(120)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/processGB.png')
+  text-align: center
+
+.study-map-process-content
+  position: absolute
+  left: px2rem(98)
+  top: px2rem(62)
+  width: px2rem(304)
+  text-align: center
+
+.study-map-process
+  height: px2rem(22)
+  width: px2rem(90)
+  border-radius: px2rem(16)
+  background: linear-gradient(to bottom, #a4ea54,#85d932, #a4ea54)
+
+.study-map-process-detail
+  font-size: px2rem(22)
+  color: #294d07
+  top: px2rem(-26)
+  position: relative
+  span
+    color: #fff
+
+.study-map-detail-prev
+  position: absolute
+  left: px2rem(126)
+  bottom: px2rem(348)
+  width: px2rem(44)
+  height: px2rem(66)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/prev-icon.png')
+
+.study-map-detail-next
+  position: absolute
+  right: px2rem(126)
+  bottom: px2rem(348)
+  width: px2rem(44)
+  height: px2rem(66)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/next-icon.png')
+
+.study-map-detail-coures-icon
+  position: absolute
+  right: 0
+  left: 0
+  bottom: px2rem(320)
+  margin: auto
+  width: px2rem(180)
+  height: px2rem(240)
+  background-size: contain
+  background-repeat: no-repeat
+  &.pass
+    background-image: url('./img/pass.png')
+
+  &.monster-one
+    background-image: url('./img/monster-one.png')
+
+  &.monster-two
+    background-image: url('./img/monster-two.png')
+
+  &.monster-three
+    background-image: url('./img/monster-three.png')
+
+  &.monster-four
+    background-image: url('./img/monster-four.png')
+
+  &.monster-five
+    background-image: url('./img/monster-five.png')
+
+  &.monster-six
+    background-image: url('./img/monster-six.png')
+
+  &.monster-seven
+    background-image: url('./img/monster-seven.png')
+
+  &.monster-eight
+    background-image: url('./img/monster-eight.png')
+
+.study-map-detail-info
+  position: absolute
+  left: px2rem(350)
+  bottom: px2rem(470)
+  width: px2rem(310)
+  height: px2rem(162)
+  background-size: contain
+  background-repeat: no-repeat
+  background-image: url('./img/studyInfo.png')
+  font-size: px2rem(28)
+  color: #9f7c54
+  padding: px2rem(22)
+  line-height: px2rem(42)
+  transition: transform 0.4s linear
+
+.study-map-detail-coures-cover
+  position: absolute
+  left: px2rem(108)
+  bottom: px2rem(175)
+  width: px2rem(176)
+  height: px2rem(119)
+  border: 1px dashed #d8a97a;
+  padding: px2rem(9)
+
+.study-map-detail-coures-desc
+  position: absolute
+  left: px2rem(436)
+  bottom: px2rem(175)
+  overflow: hidden
+  font-size: px2rem(24)
+  color: #9f7c54
+  line-height: px2rem(40)
+  height: px2rem(120)
+  width: px2rem(250)
+  text-align: left
+  word-break: break-all
+  overflow-y: scroll
+
+.study-map-items
+  padding: 0
+  margin: 0
+
+.study-map-item
+  position: absolute
+  width: px2rem(125)
+  height: px2rem(125)
+
+.study-one-one
+  top: 0
+  left: 0
+.study-one-two
+  top: 0
+  left: px2rem(125)
+.study-one-three
+  top: 0
+  left: px2rem(250)
+.study-one-four
+  top: 0
+  left: px2rem(375)
+.study-one-five
+  top: 0
+  left: px2rem(500)
+.study-one-six
+  top: 0
+  left: px2rem(625)
+
+.study-two-one
+  top: px2rem(125)
+  left: 0
+.study-two-two
+  top: px2rem(125)
+  left: px2rem(125)
+.study-two-three
+  top: px2rem(125)
+  left: px2rem(250)
+.study-two-four
+  top: px2rem(125)
+  left: px2rem(375)
+.study-two-five
+  top: px2rem(125)
+  left: px2rem(500)
+.study-two-six
+  top: px2rem(125)
+  left: px2rem(625)
+
+.study-three-one
+  top: px2rem(250)
+  left: 0
+.study-three-two
+  top: px2rem(250)
+  left: px2rem(125)
+.study-three-three
+  top: px2rem(250)
+  left: px2rem(250)
+.study-three-four
+  top: px2rem(250)
+  left: px2rem(375)
+.study-three-five
+  top: px2rem(250)
+  left: px2rem(500)
+.study-three-six
+  top: px2rem(250)
+  left: px2rem(625)
+
+.study-four-one
+  top: px2rem(375)
+  left: 0
+.study-four-two
+  top: px2rem(375)
+  left: px2rem(125)
+.study-four-three
+  top: px2rem(375)
+  left: px2rem(250)
+.study-four-four
+  top: px2rem(375)
+  left: px2rem(375)
+.study-four-five
+  top: px2rem(375)
+  left: px2rem(500)
+.study-four-six
+  top: px2rem(375)
+  left: px2rem(625)
+
+.study-five-one
+  top: px2rem(500)
+  left: 0
+.study-five-two
+  top: px2rem(500)
+  left: px2rem(125)
+.study-five-three
+  top: px2rem(500)
+  left: px2rem(250)
+.study-five-four
+  top: px2rem(500)
+  left: px2rem(375)
+.study-five-five
+  top: px2rem(500)
+  left: px2rem(500)
+.study-five-six
+  top: px2rem(500)
+  left: px2rem(625)
+
+.study-six-one
+  top: px2rem(625)
+  left: 0
+.study-six-two
+  top: px2rem(625)
+  left: px2rem(125)
+.study-six-three
+  top: px2rem(625)
+  left: px2rem(250)
+.study-six-four
+  top: px2rem(625)
+  left: px2rem(375)
+.study-six-five
+  top: px2rem(625)
+  left: px2rem(500)
+.study-six-six
+  top: px2rem(625)
+  left: px2rem(625)
+
+.study-seven-one
+  top: px2rem(750)
+  left: 0
+.study-seven-two
+  top: px2rem(750)
+  left: px2rem(125)
+.study-seven-three
+  top: px2rem(750)
+  left: px2rem(250)
+.study-seven-four
+  top: px2rem(750)
+  left: px2rem(375)
+.study-seven-five
+  top: px2rem(750)
+  left: px2rem(500)
+.study-seven-six
+  top: px2rem(750)
+  left: px2rem(625)
+
+.study-eight-one
+  top: px2rem(875)
+  left: 0
+.study-eight-two
+  top: px2rem(875)
+  left: px2rem(125)
+.study-eight-three
+  top: px2rem(875)
+  left: px2rem(250)
+.study-eight-four
+  top: px2rem(875)
+  left: px2rem(375)
+.study-eight-five
+  top: px2rem(875)
+  left: px2rem(500)
+.study-eight-six
+  top: px2rem(875)
+  left: px2rem(625)
+
+.study-nine-one
+  top: px2rem(1000)
+  left: 0
+.study-nine-two
+  top: px2rem(1000)
+  left: px2rem(125)
+.study-nine-three
+  top: px2rem(1000)
+  left: px2rem(250)
+.study-nine-four
+  top: px2rem(1000)
+  left: px2rem(375)
+.study-nine-five
+  top: px2rem(1000)
+  left: px2rem(500)
+.study-nine-six
+  top: px2rem(1000)
+  left: px2rem(625)
+
+.study-ten-one
+  top: px2rem(1125)
+  left: 0
+.study-ten-two
+  top: px2rem(1125)
+  left: px2rem(125)
+.study-ten-three
+  top: px2rem(1125)
+  left: px2rem(250)
+.study-ten-four
+  top: px2rem(1125)
+  left: px2rem(375)
+.study-ten-five
+  top: px2rem(1125)
+  left: px2rem(500)
+.study-ten-six
+  top: px2rem(1125)
+  left: px2rem(625)
+
+.study-map-item-img
+  display: inline-block
+  width: px2rem(125)
+  height: px2rem(125)
+  background-size: contain
+  background-repeat: no-repeat
+  &.pass
+    background-image: url('./img/pass.png')
+    background-position-x: px2rem(16)
+
+  &.monster-one
+    background-image: url('./img/monster-one.png')
+    background-position-x: px2rem(14)
+
+  &.monster-two
+    background-image: url('./img/monster-two.png')
+    background-position-x: px2rem(14)
+
+  &.monster-three
+    background-image: url('./img/monster-three.png')
+    background-position-x: px2rem(14)
+
+  &.monster-four
+    background-image: url('./img/monster-four.png')
+    background-position-x: px2rem(16)
+
+  &.monster-five
+    background-image: url('./img/monster-five.png')
+    background-position-x: px2rem(14)
+
+  &.monster-six
+    background-image: url('./img/monster-six.png')
+    background-position-x: px2rem(16)
+
+  &.monster-seven
+    background-image: url('./img/monster-seven.png')
+    background-position-x: px2rem(16)
+
+  &.monster-eight
+    background-image: url('./img/monster-eight.png')
+    background-position-x: px2rem(16)
+
+.study-map-detail-coures-btn
+  display: inline-block
+  width: px2rem(222)
+  height: px2rem(68)
+  background-size: contain
+  background-repeat: no-repeat
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 28px
+  margin: auto
+  &.enter
+    background-image: url('./img/start.png')
+  &.notStart
+    background-image: url('./img/notStart.png')
+  &.review
+    background-image: url('./img/review.png')
+  &.enterEn
+    background-image: url('./img/startEn.png')
+  &.notStartEn
+    background-image: url('./img/notStartEn.png')
+  &.reviewEn
+    background-image: url('./img/reviewEn.png')

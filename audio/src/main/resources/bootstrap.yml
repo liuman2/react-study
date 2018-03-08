@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: audio_courseware
+  profiles:
+    active: @env@
+  cloud:
+    config:
+      uri: @spring.cloud.config.server@
+      username: username-69d907b2-99b0-402b-9d19-d4ba5af436af
+      password: password-cd668d9b-0092-443d-a6ad-6dc5d343706f
+      label: master
+      discovery: 
+        enabled: false
+cs:
+  serviceName: prepub_content_edu
+  host: betacs.101.com
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false  
+waf:
+  unAuthenticated: /app/**

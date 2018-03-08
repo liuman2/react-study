@@ -1,0 +1,199 @@
+.exercise-body
+  background-color: #fff
+  margin-bottom: 12px
+
+.mb-20
+  margin-bottom 20px!important
+.mb-10
+  margin-bottom 10px!important
+.exercise-content
+  line-height: 40px
+  .content
+    font-size: 14px
+    color: $color-Z1
+    word-break: break-all
+    word-wrap: break-word
+  .exercise-title
+    padding-left 22px
+    margin-bottom 20px
+    line-height 20px
+  p
+    display inline
+    margin 0
+    padding 0
+  input[type=button]
+    margin 0 3px
+    padding-bottom 1px
+    color #008cd6
+    border none
+    background-color: #fff
+    width 24px
+    height 20px
+    border-bottom 1px solid #008cd6
+
+.exercise-type
+  display: inline-block
+  margin-right: 8px
+  height: 20px
+  width: 56px
+  vertical-align: middle
+  &.single
+    background: url(./img/icon-single.png) no-repeat
+    background-size: cover
+  &.multi
+    background: url(./img/icon-multi.png) no-repeat
+    background-size: cover
+  &.judge
+    background: url(./img/icon-judge.png) no-repeat
+    background-size: cover
+  &.completion
+    background: url(./img/icon-completion.png) no-repeat
+    background-size: cover
+  &.qa
+    background: url(./img/icon-qa.png) no-repeat
+    background-size: cover
+
+  &.en-single
+    background: url(./img/en-icon-single.png) no-repeat
+    background-size: cover
+  &.en-multi
+    background: url(./img/en-icon-multi.png) no-repeat
+    background-size: cover
+    width: 68px
+  &.en-judge
+    background: url(./img/en-icon-judge.png) no-repeat
+    background-size: cover
+    width: 89px
+  &.en-completion
+    background: url(./img/icon-completion.png) no-repeat
+    background-size: cover
+  &.en-qa
+    background: url(./img/icon-qa.png) no-repeat
+    background-size: cover
+
+.answer-title
+  margin-left 48px
+  color #008cd6
+.exercise-answer
+  color: $color-Z2
+  font-size: 14px
+  padding-left: 22px !important
+  .ml-24
+    margin-left 24px
+  .answer-input
+    margin-bottom 8px
+    .answer-index
+      color #008cd6
+    .answer-item
+      margin-left 10px
+      color #666666
+    input[type=text]
+      width 406px
+      height 34px
+      border 1px solid #bec0c0
+      padding 0 10px
+      margin-left 20px
+  textarea
+    width 406px
+    height 130px
+
+.exercise-answer-item
+  line-height: 40px
+  cursor: pointer
+  &.right
+    background-color: #f1f9ea
+  &.wrong
+    background-color: #ffe8e8
+  &:before
+    content: ''
+    width: 16px
+    height: 16px
+    margin-right: 8px
+    display: inline-block
+    vertical-align: sub
+  &.multi:before
+    background: url(./img/icon_multi.png) no-repeat
+    background-size: cover
+  &.noMulti:before
+    background: url(./img/icon_nomulti.png) no-repeat
+    background-size: cover
+  &.active.multi:before
+    background: url(./img/icon_multi_active.png) no-repeat
+    background-size: cover
+  &.active.noMulti:before
+    background: url(./img/icon_nomulti_active.png) no-repeat
+    background-size: cover
+  &:last-child
+    margin-bottom: 12px
+  &:after
+    content: ''
+    display: block
+
+.exercise-answer-item-content
+  word-break: break-all
+  word-wrap: break-word
+
+.exercise-img-content
+  margin-bottom: 8px !important
+  margin-left: 22px !important
+  line-height: 0;
+
+.exercise-answer-img
+  margin-bottom: 8px !important
+  line-height: 0;
+
+.exercise-analysis-img
+  line-height: 0
+  margin-top: 12px !important
+
+.exercise-image-viewer
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: black;
+    z-index: 9;
+    padding-top: px2rem(300);
+    overflow: hidden;
+    width: 100%
+
+.exercise-img
+  display: inline-block
+  margin-right: 20px
+  height: 128px
+  width: 218px
+  margin-top: 20px !important
+  &:nth-child(4n+0)
+    margin-right: 0
+  &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
+    margin-top: 0 !important
+
+.exercise-analysis
+  padding-top: 24px
+  padding-bottom: 24px
+  padding-left: 24px
+  padding-right: 24px
+  margin-left: 22px
+  background-color: $color-A0
+  .analysis-title
+    color: $color-A1
+    font-size: 16px
+    height: 16px
+    line-height: 16px
+    margin-bottom: 12px
+    &.uncheck
+      color: #ff8208
+  .analysis-content
+    margin: 0
+    padding: 0
+    color: $color-Z2
+    font-size: 14px
+    word-break: break-all
+    word-wrap: break-word
+  .analysis-answer
+    color: $color-Z2
+    margin-top: 8px
+    font-size: 14px
+    height: 14px
+    line-height: 14px
+    word-break: break-all
+    word-wrap: break-word

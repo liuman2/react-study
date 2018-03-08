@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.nd.gaea</groupId>
+        <artifactId>gaea-spring-boot-rest-parent</artifactId>
+        <version>5.2-SNAPSHOT</version>
+    </parent>
+  <groupId>com.nd.share.demo</groupId>
+  <artifactId>audio_courseware</artifactId>
+  <packaging>war</packaging>
+  <version>0.1.0-SNAPSHOT</version>
+  <name>audio_courseware</name>
+
+  <properties>
+        <gaea.version>6.6.0-SNAPSHOT</gaea.version>
+        <uranus-gql.version>6.1-SNAPSHOT</uranus-gql.version>
+        <uranus-common.version>6.1-SNAPSHOT</uranus-common.version>
+        <elearning-ndr-sdk.version>5.7.0-SNAPSHOT</elearning-ndr-sdk.version>
+
+        <gaea-swagger-config-locations>nd.esp.service.ndr.ac.gateway.controller</gaea-swagger-config-locations>
+        <gaea-swagger-api-config-document-name>${project.artifactId}.html</gaea-swagger-api-config-document-name>
+        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+        <maven.build.time>${maven.build.timestamp}</maven.build.time>
+        <gaea-swagger-api-config-host>有声课件网关
+            开发环境：http://audio-courseware.dev.web.nd/
+            测试环境：http://audio-courseware.debug.web.nd/
+            集成环境：https://audio-courseware.pre1.101.com/
+            预生产环境：http://audio-courseware.beta.101.com/
+            生产环境：http://audio-courseware.sdp.101.com/
+        </gaea-swagger-api-config-host>
+        <gaea-swagger-api-config-title>audio_courseware</gaea-swagger-api-config-title>
+        <gaea-swagger-api-config-ftp-url>ftp://elearningapi:elearning%21%40%23@192.168.230.52
+        </gaea-swagger-api-config-ftp-url>
+    </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-log4j2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.modelmapper</groupId>
+      <artifactId>modelmapper</artifactId>
+      <version>0.7.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.nd.gaea</groupId>
+      <artifactId>uranus-common</artifactId>
+      <version>${uranus-common.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+    </dependency>
+            <!--
+        <dependency>
+			<groupId>com.nd.component.java</groupId>
+			<artifactId>sdpcs_java_sdk</artifactId>
+			<version>3.0.0</version>
+		</dependency> -->
+  </dependencies>
+  <profiles>
+    <profile>
+      <id>integration</id>
+      <properties>
+        <env>integration</env>
+        <spring.cloud.config.server>http://cloud-config-server.edu.web.sdp.101.com/</spring.cloud.config.server>
+      </properties>
+      <!-- <activation><activeByDefault>true</activeByDefault></activation> -->
+    </profile>
+  </profiles>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <argLine>-XX:MaxPermSize=256m -Dfile.encoding=UTF-8</argLine>
+          <!--打包时是否略过测试 -->
+          <skip>true</skip>
+          <!--测试出现错误时是否忽略，如果为true，则会直接打包 -->
+          <testFailureIgnore>true</testFailureIgnore>
+        </configuration>
+        <version>2.17</version>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.0.0</version>
+          <configuration>
+              <warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
+          </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <systemProperties>
+            <file.encoding>UTF-8</file.encoding>
+          </systemProperties>
+          <uriEncoding>UTF-8</uriEncoding>
+          <path>/</path>
+          <port>80</port>
+        </configuration>
+      </plugin>
+      <!-- 移动配置文件 config 到 app 目录下 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <id>env-filter</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <echo message="copy /filters/${env}/config.js"/>
+                <copy file="src/main/filters/${env}/config.js" tofile="src/main/app/config.js" failonerror="true" overwrite="true"/>
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- 安装并在线进行打包前端文件 -->
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>0.0.22</version>
+        <configuration>
+          <workingDirectory>${basedir}</workingDirectory>
+        </configuration>
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <nodeVersion>v7.4.0</nodeVersion>
+              <npmVersion>5.6.0</npmVersion>
+              <nodeDownloadRoot>http://cdncs.101.com/v0.1/static/fish/node/</nodeDownloadRoot>
+              <!--<npmDownloadRoot>https://npm.taobao.org/mirrors/node/npm/</npmDownloadRoot>-->
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm install</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>install</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm deploy</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run dist</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <distributionManagement>
+    <repository>
+      <id>java-releases</id>
+      <name>ND java releases nexus mirror.</name>
+      <url>http://nexus.sdp.nd/nexus/content/repositories/java/</url>
+    </repository>
+    <snapshotRepository>
+      <id>java-snapshots</id>
+      <name>ND java snapshots nexus mirror.</name>
+      <url>http://nexus.sdp.nd/nexus/content/repositories/java_snapshot/</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

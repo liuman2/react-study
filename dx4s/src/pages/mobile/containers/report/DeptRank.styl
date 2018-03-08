@@ -1,0 +1,70 @@
+rank-img(rate)
+  background-image url("./imgs/top" + rate + ".png")
+  background-size px2rem(56) px2rem(56)
+  background-repeat no-repeat
+  background-position center
+
+.deptRankItem
+  border-top: 1px solid $color-L1
+  background: #fff
+  padding: 0 px2rem(10)
+  height: px2rem(120)
+  display: flex
+  align-items: center
+  &:first-child
+    border-top: none
+
+  .order
+    font-size px2rem(42)
+    min-width 50px
+    display flex
+    justify-content center
+    align-items center
+    padding 10px
+    color $color-Z2
+    height: px2rem(56)
+    font-style: italic
+  .first
+    rank-img(1)
+  .second
+    rank-img(2)
+  .third
+    rank-img(3)
+
+  .profile
+    width: px2rem(395)
+    display: inline-flex
+    flex-direction: column
+    justify-content: center
+
+   .name
+    text-overflow ellipsis
+    white-space normal
+    overflow hidden
+    display -webkit-box
+    -webkit-line-clamp 1
+    -webkit-box-orient vertical
+
+  .department
+    font-size px2rem(24)
+    color $color-Z2
+    text-overflow ellipsis
+    white-space normal
+    overflow hidden
+    display -webkit-box
+    -webkit-line-clamp 1
+    -webkit-box-orient vertical
+
+  .complete
+    align-items center
+    justify-content flex-end
+    display flex
+    flex-basis 110px
+    padding-right 10px
+    white-space nowrap
+
+  .percentage
+    font-size px2rem(36)
+    margin-left 5px
+    font-weight bold
+    font-size: px2rem(26)

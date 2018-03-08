@@ -1,0 +1,58 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "globals": {
+    "__DEV__": true,
+    "__platform__": true,
+    "__device__": true,
+    "__PLATFORM__": true,
+    "__ENVIROMENT__": true,
+    "__DEVICE__": true
+  },
+  "extends": "airbnb",
+  "plugins": [
+    "babel",
+    "immutablejs"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "jest": true
+  },
+  "rules": {
+    "max-len": [ "error", 200 ],
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": [ "error", {
+      "ignore": [
+        "css/",
+        "js/",
+        "utils/",
+        "styles/",
+        "components/",
+        "hocs",
+        "img/",
+        "dxActions",
+        "dxConstants",
+        "dxReducers",
+        "dxSelectors",
+        "dxConfig",
+        "i18n"
+      ]
+    }],
+    "linebreak-style": [
+      "error",
+      "windows"
+    ]
+  }
+}

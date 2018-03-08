@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="referrer" content="always">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="多学">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <meta name="browsermode" content="application">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="x5-page-mode" content="app">
+  <title>多学</title>
+  <script>
+    var tid;
+    function refreshRem() {
+      var docEl = document.documentElement,
+      fontSize = .1 * docEl.getBoundingClientRect().width;
+      docEl.style.fontSize = fontSize + 'px';
+    }
+    window.addEventListener('resize', function() {
+        clearTimeout(tid);
+        tid = setTimeout(refreshRem, 300);
+    }, false);
+    window.addEventListener('pageshow', function(e) {
+        if (e.persisted) {
+            clearTimeout(tid);
+            tid = setTimeout(refreshRem, 300);
+        }
+    }, false);
+    refreshRem();
+
+    window.matchMedia = window.matchMedia || function() {
+      return {
+        matches: false,
+        addListener: function () {},
+        removeListener: function () {},
+      };
+    };
+  </script>
+  <script type="text/javascript" src="http://cdncs.101.com/v0.1/static/cloudatlas_cs/websdk/v1.5.7/cloud-atlas.min.js"></script>
+  <script type="text/javascript">
+    // window.onload = function () {
+      CloudAtlas.setLogEnabled(true);
+      var options = {
+        appKey: "acfdf8efc9e4497ca8122221a1bf82a4",
+        appVer: "0.0.1",
+        channelId: "default",
+        isDebugMode: false
+      };
+      CloudAtlas.init(options);
+      CloudAtlas.onOpen();
+    // }
+    </script>
+</head>
+<body>
+  <div class="app-loding-wrapper" id="app-loding">
+    <div class="logo"></div>
+    <div class="app-loding">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+    <div id="login-msg"></div>
+  </div>
+  <div class="dd-guide" id="dd-guide"></div>
+  <div id="root"></div>
+  
+</body>
+</html>

@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html>
+<name>Api doc</name>
+<style>
+    .navbar-fixed-top{display: none;}
+    body{padding-top: 0;}
+    name{display: none;}
+    td pre{ margin:0; padding: 0; border: none; background:none;}
+</style>
+<xmp theme="united" style="display:none;">
+#audio_courseware
+
+
+## HTTP://有声课件网关
+            开发环境：http://audio_courseware.dev.web.nd/
+            测试环境：http://audio_courseware.debug.web.nd/
+            集成环境：https://audio_courseware.pre1.101.com/
+            预生产环境：http://audio_courseware.beta.101.com/
+            生产环境：http://audio_courseware.sdp.101.com/
+
+API文档描述
+
+**Version** 0.1.0-SNAPSHOT
+
+
+
+
+
+
+
+
+
+<div class="catalog">
+<style>
+.catalog{
+height:auto;
+}
+</style>
+# Catalogs
+
+
+* <a href="#/v1">**/v1**</a><br/>
+<a href="#/v1@post">POST 创建有声课件接口</a><br/>
+
+</div>
+# APIs
+
+
+## <a name="/v1">/v1</a>
+
+
+
+
+
+
+### <a name="/v1@post">POST /v1</a>
+
+创建有声课件接口
+
+
+
+
+
+
+
+
+
+#### Request
+
+
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>constraints</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>body</th>
+    <td>body</td>
+    <td>yes</td>
+    <td>
+         
+    </td>
+    <td><pre>资源创建对象</pre></td>
+    <td></td>
+
+    <td>
+    
+    <a href="#/definitions/AudioCoursewareVO">AudioCoursewareVO</a> 
+    
+    </td>
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| 200 | successful operation | |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Definitions
+
+## <a name="/definitions/AudioCoursewareVO">AudioCoursewareVO</a>
+
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>type</th>
+        <th>required</th>
+        <th>constraints</th>
+        <th>description</th>
+        <th>example</th>
+    </tr>
+    
+        <tr>
+            <td>title</td>
+            <td>
+                
+                    
+                    string 
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+                   NotBlank
+                   
+                   ;<br/>
+                 
+            </td>
+            <td>标题<br></td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>creator</td>
+            <td>
+                
+                    
+                    string 
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+                   NotBlank
+                   
+                   ;<br/>
+                 
+            </td>
+            <td>创建者<br></td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>items</td>
+            <td>
+                
+                
+                    array[<a href="#/definitions/AudioInfo">AudioInfo</a>]
+                
+                
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+                   NotBlank
+                   
+                   ;<br/>
+                 
+            </td>
+            <td>音频集合<br></td>
+            <td></td>
+        </tr>
+    
+</table>
+
+
+```json
+{
+    "title": "string",
+    "creator": "string",
+    "items": [
+        {
+            "audio_identifier": "string",
+            "dead_time": "string",
+            "items": [
+                {
+                    "img_url": "string",
+                    "start_time": "string",
+                    "end_time": "string",
+                    "dead_time": "string"
+                }
+            ]
+        }
+    ]
+}
+```
+
+## <a name="/definitions/AudioInfo">AudioInfo</a>
+
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>type</th>
+        <th>required</th>
+        <th>constraints</th>
+        <th>description</th>
+        <th>example</th>
+    </tr>
+    
+        <tr>
+            <td>audio_identifier</td>
+            <td>
+                
+                    
+                    string 
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+                   NotBlank
+                   
+                   ;<br/>
+                 
+            </td>
+            <td>音频id<br></td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>dead_time</td>
+            <td>
+                
+                    
+                    string 
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+            </td>
+            <td>停顿时间<br></td>
+            <td>PT2S</td>
+        </tr>
+    
+        <tr>
+            <td>items</td>
+            <td>
+                
+                
+                    array[<a href="#/definitions/ImgInfo">ImgInfo</a>]
+                
+                
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+            </td>
+            <td>图片集合<br></td>
+            <td></td>
+        </tr>
+    
+</table>
+
+
+```json
+{
+    "audio_identifier": "string",
+    "dead_time": "string",
+    "items": [
+        {
+            "img_url": "string",
+            "start_time": "string",
+            "end_time": "string",
+            "dead_time": "string"
+        }
+    ]
+}
+```
+
+## <a name="/definitions/ImgInfo">ImgInfo</a>
+
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>type</th>
+        <th>required</th>
+        <th>constraints</th>
+        <th>description</th>
+        <th>example</th>
+    </tr>
+    
+        <tr>
+            <td>img_url</td>
+            <td>
+                
+                    
+                    string 
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+                   NotBlank
+                   
+                   ;<br/>
+                 
+            </td>
+            <td>图片地址<br></td>
+            <td></td>
+        </tr>
+    
+        <tr>
+            <td>start_time</td>
+            <td>
+                
+                    
+                    string 
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+                   NotBlank
+                   
+                   ;<br/>
+                 
+            </td>
+            <td>对应音频的开始时间<br></td>
+            <td>PT10M2S</td>
+        </tr>
+    
+        <tr>
+            <td>end_time</td>
+            <td>
+                
+                    
+                    string 
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+                   NotBlank
+                   
+                   ;<br/>
+                 
+            </td>
+            <td>对应音频的结束时间<br></td>
+            <td>PT1H2M2S</td>
+        </tr>
+    
+        <tr>
+            <td>dead_time</td>
+            <td>
+                
+                    
+                    string 
+                
+            </td>
+            <td>required</td>
+            <td>
+                 
+            </td>
+            <td>停顿时间<br></td>
+            <td>PT2S</td>
+        </tr>
+    
+</table>
+
+
+```json
+{
+    "img_url": "string",
+    "start_time": "string",
+    "end_time": "string",
+    "dead_time": "string"
+}
+```
+
+
+
+</xmp>
+
+<script src="http://s21.tianyuimg.com/addins/strapdown/0.2/strapdown.js"></script>
+<script>
+window.onload=function(){function e(e){n=e.clientX,r.className+=" active",a=!0,document.documentElement.addEventListener("mousemove",o,!1),document.documentElement.addEventListener("mouseup",t,!1)}function o(e){if(a){var o=e.clientX;r.style.left=o+"px"}}function t(e){a=!1;var n=e.clientX;r.className="dragger",document.documentElement.removeEventListener("mou

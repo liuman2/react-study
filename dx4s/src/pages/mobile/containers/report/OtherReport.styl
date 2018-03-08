@@ -1,0 +1,142 @@
+.my-report
+  background-color #f5f5f5
+  header
+    padding px2rem(32) px2rem(24) px2rem(48)
+    color #ffffff
+    background-image url("./imgs/bg.png")
+    background-size 100% 100%
+    background-repeat no-repeat
+    .days
+      text-align center
+      .value
+        font-size px2rem(72)
+      .unit
+        font-size px2rem(28)
+    .duration
+      text-align center
+      .item
+        display inline-block
+        margin 0 px2rem(30)
+        img
+          width px2rem(26)
+          height px2rem(26)
+          margin-right px2rem(10)
+  section
+    padding 0 px2rem(24)
+
+  .section-rank
+    text-align center
+    padding px2rem(40) 0
+    .title
+      color #666666
+      display inline-flex
+      align-items center
+      background-image url("./imgs/bg-rank-title.png")
+      background-position center
+      padding-right px2rem(15)
+      img
+        width px2rem(36)
+        height px2rem(36)
+        margin 0 px2rem(15)
+
+    .card-group
+      margin px2rem(40) auto 0
+      width px2rem(660)
+      height px2rem(340)
+      border-radius px2rem(10)
+      display flex
+      align-items flex-end
+      .card
+        flex 1
+        background-color #ffffff
+        border-radius px2rem(10)
+        height px2rem(300)
+        position relative
+        .shadow-triangle
+          width 0
+          height 0
+          border-top px2rem(170) solid #e5e5e5
+          position absolute
+        .shadow-triangle-right
+          right 0
+          border-left px2rem(10) solid transparent
+        .shadow-triangle-left
+          left 0
+          border-right px2rem(10) solid transparent
+        .avatar-box
+          height px2rem(170)
+          position relative
+          .box
+            position absolute
+            bottom 0
+            width px2rem(96)
+            height px2rem(130)
+            left px2rem(62)
+          .face
+            position absolute
+            width px2rem(96)
+            height px2rem(96)
+            border-radius 50%
+            bottom 0
+            left px2rem(62)
+        .rank-user
+          color #8c8c8c
+          margin-top px2rem(15)
+          width px2rem(220)
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        .rank-value
+          font-weight bold
+          font-size px2rem(36)
+      .card.left
+        border-bottom-right-radius 0
+        border-top-right-radius 0
+      .card.right
+        border-top-left-radius 0
+        border-bottom-left-radius 0
+      .card.top
+        height px2rem(340)
+        .rank-value {
+          color $color-A1
+        }
+        .avatar-box
+          height px2rem(210)
+          .face
+            width px2rem(136)
+            height px2rem(136)
+            left px2rem(42)
+          .box
+            width px2rem(136)
+            height px2rem(174)
+            left px2rem(42)
+          
+
+  .list-item
+    display flex
+    align-items center
+    height px2rem(96)
+    background-color #ffffff
+    margin-bottom 1px
+    .bold
+      font-weight bold
+      font-size px2rem(36)
+    a {
+      color $color-Z1
+      width 100%;
+      display: block;
+    }
+  .list-item.link
+    background-image url("./imgs/icon-arrow-right.png")
+    background-position-y center
+    background-repeat no-repeat
+    background-position-x 95%
+    background-size px2rem(24)
+  .mt20
+    margin-top px2rem(20)
+  .data-remark
+    color #a0a0a0
+    text-align center
+    padding-top px2rem(20)
+    padding-bottom px2rem(20)
+

@@ -1,0 +1,43 @@
+bgIcon(name)
+  background url("./static/" + name + ".png")
+  background-position-y center
+  background-position-x px2rem(35)
+  background-size px2rem(30)
+  background-repeat no-repeat
+
+.join
+  height 100%
+  width 100%
+  padding px2rem(20)
+  background-color #ffffff
+  .icon-user_name
+    bgIcon("icon-user_name")
+  .icon-account_name
+    bgIcon("icon-account_name")
+  .icon-verify_code
+    bgIcon("icon-verify_code")
+  .icon-password
+    bgIcon("icon-password")
+  .icon-confirm_password
+    bgIcon("icon-password")
+  .icon-mobile
+    bgIcon("icon-mobile")
+  .field
+    border-bottom px2rem(5) solid #f3f3f3
+    height px2rem(100)
+    padding px2rem(15)
+    display flex
+    align-items center
+    input
+      flex 1
+      border 0
+      margin-left px2rem(70)
+    .code
+      background-color transparent
+      border none
+      border-left 1px solid #fff
+      background none
+  .join-button
+    margin-top px2rem(50)
+  .memo
+    margin-left px2rem(20) !important

@@ -1,0 +1,16 @@
+.saveOpt{
+  position: absolute;
+  right: 0;
+  .saveOpt-ul{
+    width: 2rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: 0;
+  }
+  .saveOpt-li{
+    width: 100%;
+    font-size: 0.3rem;
+    padding: 5px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,93 @@
+.favorite
+  .icon
+    display inline-block
+  .card
+    .card-text
+      overflow hidden
+      .name
+        line-height px2rem(40)
+        height px2rem(80)
+        word-break: break-all;
+        overflow hidden
+    .icon-delete
+      float right
+      width px2rem(40)
+      height px2rem(44)
+      margin-top px2rem(12)
+      background url('../../../../img/icon_delete.png') no-repeat
+      background-size contain
+      &:hover, &:active
+        background url('../../../../img/icon_delete_active.png') no-repeat
+        background-size contain
+
+  .valid-status
+    display inline-block
+    font-size px2rem(24)
+    background-repeat no-repeat
+    background-position 0 center
+    position relative
+    &.not-started
+      padding-left px2rem(40)
+      background-image url(./img/icon-plan-notStart.png)
+      color $color-A1
+      background-size contain
+    &.invalid
+      padding-left px2rem(40)
+      background-image url(./img/icon-plan-invalid.png)
+      color $color-B4
+      background-size contain
+    &.will-invalid
+      padding-left px2rem(40)
+      background-image url(./img/icon-plan-willInvalid.png)
+      color $color-B4
+      background-size contain
+    &.not-study
+      position absolute
+      right px2rem(80)
+      bottom px2rem(10)
+      width px2rem(111)
+      height px2rem(88)
+      background url(./img/icon-not-study.png) no-repeat
+      background-size contain
+    &.pass
+      position absolute
+      right px2rem(80)
+      bottom px2rem(10)
+      width px2rem(111)
+      height px2rem(88)
+      background url(./img/icon-pass.png) no-repeat
+      background-size contain
+    &.not-pass
+      position absolute
+      right px2rem(80)
+      bottom px2rem(10)
+      width px2rem(111)
+      height px2rem(88)
+      background url(./img/icon-not-pass.png) no-repeat
+      background-size contain
+  .remove
+    position absolute
+    bottom 10px
+    &:before
+      content ''
+      position relative
+      top px2rem(4)
+      display inline-block
+      width px2rem(44)
+      height px2rem(40)
+      background url(../../../../img/icon_delete.png) no-repeat
+      background-size contain
+  .type-icon
+    display inline-block
+    width px2rem(144)
+    height px2rem(36)
+    line-height px2rem(36)
+    position absolute
+    left px2rem(-42)
+    top px2rem(12)
+    transform rotate(-45deg)
+    font-size px2rem(24)
+    text-align center
+    background $brand-primary
+    color #fff
+

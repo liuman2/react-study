@@ -1,0 +1,29 @@
+nav
+  display flex
+  background-color #fff
+  height px2rem(92)
+  a
+    flex 1    
+    font-size px2rem(32)
+    text-align center
+    padding px2rem(22) 0
+    color $color-Z1
+    border-bottom 1px solid $color-L1
+    display: block
+    &.active
+      color $color-A1
+      border-bottom 2px solid $color-A1
+
+    &:not(:last-child):after
+      border-right 1px solid $color-L2
+      content ''
+      height 100%
+      float right
+
+    .operation
+      position: absolute;
+      text-align: left;      
+      img {
+        height: px2rem(32)
+        padding: 0 15px;
+      }

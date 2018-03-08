@@ -1,0 +1,15 @@
+export default {
+  restChance: { id: 'app.myExams.restChance', en: 'You still have {chances} {chances, plural, one {chance} other {chances}}', zh: '你还有{chances}次挑战机会' },
+  unlimitedRestChance: { id: 'app.myExams.unlimitedRestChance', en: 'Unlimited number of exam', zh: '不限考试次数' },
+  passedText: { id: 'app.myExams.passed', en: 'Passed', zh: '已通过' },
+  failedText: { id: 'app.myExams.failed', en: 'Failed', zh: '未通过' },
+  points: { id: 'app.myExams.points', en: '{score} {score, plural, one {point} other {points}} ', zh: '{score}分' },
+  noMsg: { id: 'app.myExams.noMsg', en: 'You have no exams', zh: '还未发现任何考试哦~' },
+  exams: { id: 'app.exams.title', en: 'My exams', zh: '我的考试' },
+  validStatusNotStart: { id: 'app.exams.validStatusNotStart', en: '尚未开始', zh: '尚未开始' },
+  validStatusInvalid: { id: 'app.exams.validStatusInvalid', en: '已过期', zh: '已过期' },
+  validStatusNotStudy: { id: 'app.exams.validStatusNotStudy', en: '未学未通过', zh: '未学未通过' },
+  validStatusPass: { id: 'app.exams.validStatusPass', en: '已学已通过', zh: '已学已通过' },
+  validStatusNotPass: { id: 'app.exams.validStatusNotPass', en: '已学未通过', zh: '已学未通过' },
+  validStatusNotMark: { id: 'app.exams.validStatusNotMark', en: '待批阅', zh: '待批阅' },
+};

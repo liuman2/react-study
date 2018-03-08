@@ -1,0 +1,18 @@
+@import "./reset.css";
+
+#app {
+  position: absolute;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.ac-ui-layout {
+  min-height: 620px;
+}
+.ac-pop-save2 .ac-ui-pop__body {
+  text-align: center!important;
+}

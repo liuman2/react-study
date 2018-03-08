@@ -1,0 +1,52 @@
+// 参考 https://github.com/cecipeng/ceci.css/blob/master/src/ceci.css/_base/_mixin.scss
+
+// 自动换行
+%wb {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+// 文字超出显示省略号
+%tof {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 清除浮动
+%cf {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+//垂直居中
+%vm {
+    &:after {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: 100%;
+        content: "";
+    }
+}
+
+// 100% 高度纵向滚动
+%ho {
+  height: 100%;
+  overflow-y: auto;
+}
+
+// 填满
+%full {
+  height: 100%;
+  width: 100%;
+}
+
+// 相对定位填满
+%rfull {
+  @extend %full;
+  position: relative;
+}

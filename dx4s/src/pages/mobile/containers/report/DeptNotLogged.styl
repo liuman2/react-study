@@ -1,0 +1,43 @@
+.notLoggedItem
+  border-top: 1px solid $color-L1
+  background: #fff
+  padding: 0 px2rem(24)
+  line-height: px2rem(120)
+  display: flex
+  align-items: center
+  &:first-child
+    border-top: none
+
+  img
+    width: px2rem(80)
+    height: px2rem(80)
+    border-radius: 50%
+    margin-right: px2rem(16)
+
+  .profile
+    width: px2rem(340)
+    flex: 1
+    flex-direction: column
+    justify-content: center
+
+   .name
+    color: $color-Z1
+    height: px2rem(40)
+    line-height: px2rem(40)
+    text-overflow ellipsis
+    overflow hidden
+    padding-right: px2rem(20)
+
+  .department
+    color: $color-Z2
+    font-size px2rem(24)
+    height: px2rem(40)
+    line-height: px2rem(40)
+    text-overflow ellipsis
+    overflow hidden
+    padding-right: px2rem(20)
+
+  .loggedTime
+    display: inline-flex;
+    color: $color-Z2
+    font-size: px2rem(26)

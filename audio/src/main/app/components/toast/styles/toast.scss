@@ -1,0 +1,44 @@
+.ac-ui-toast {
+    position: absolute;
+    transition: all .3s ease-out;
+    left: 50%;
+    top: 50%;
+    // margin-left: -51px;
+    // margin-top: -22px;
+    display: none;
+    vertical-align: middle;
+    // max-width: 150px;
+    padding: 12px 20px;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 2px;
+    z-index: 1002;
+    max-height: 50%;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    &.ac-ui-toast-show {
+        visibility: visible;
+        display: inline-block;
+        border-color: #000;
+        color: #fff;
+    }
+    &::after {
+        position: absolute;
+        transition: all .3s ease-out;
+        content: "";
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        background: #000;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+        opacity: .7;
+        filter: Alpha(opacity=70);
+        border-radius: 2px;
+        z-index: -1;
+    }
+}
